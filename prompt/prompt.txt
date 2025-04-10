@@ -1,0 +1,46 @@
+GENERAL PROMPT
+Task:
+Analyze the provided JSON interactions (`title`, `description`).
+
+Objective:
+Focus on identifying general preferences by examining genres, themes, categories, or attributes reflected in the user’s historical behavior.
+
+Output:
+Generate a concise, natural language user profile (300-500 characters) which is rich in semantic context and suitable for embedding generation using SBERT.
+
+Example Output:
+The user enjoys adventurous movies with elements of fantasy, sci-fi, or supernatural themes. They prefer imaginative storylines with complex characters and unique challenges."
+
+LONG-TERM PROMPT
+task:
+Analyze the provided JSON interactions (title, description, timestamp), where timestamp is in UNIX timestamp format. Focus on identifying stable, enduring trends that persist across a broad historical range of the user's data.
+
+Objectives:
+1. Extract long-term preferences: Interests, genres, themes, directors, actors, or categories that consistently appear throughout the user's historical interactions.
+2. Consider the entire available dataset, using older and more recent entries to identify patterns that have remained constant over time.
+3. Avoid assumptions not supported by the data. Emphasize enduring patterns rather than recent fluctuations or short-lived trends.
+
+Output Format:
+- Produce a concise, single-paragraph summary (300-500 characters) in natural language, highlighting the user's persistent, long-term Movies preferences.
+- The output should be rich in semantic context, suitable for embedding generation using SBERT.
+
+example_output:
+Over time, the user has consistently gravitated toward narrative-rich dramas and psychological thrillers, often featuring layered storytelling, morally complex characters, and acclaimed directors like David Fincher. Their sustained interest in films blending deep thematic elements and intricate plots suggests a core preference for thought-provoking cinema.
+
+SHORT-TERM PROMPT
+task:
+  Analyze the provided JSON interactions (`title`, `description`, `timestamp`), where `timestamp` is in UNIX timestamp format. Focus on identifying trends from the user's most recent interactions.
+
+  Objectives:
+    1. Extract short-term preferences: Interests, genres, themes, directors, actors, or specific trends evident in the user's most recent interactions.
+    2. If the user has many interactions, prioritize analyzing the last 3 interactions based on timestamp of interactions. If fewer interactions are available, analyze all provided data.
+    3. Avoid assumptions not supported by the data. Instead, focus on explicit patterns or repeated themes in recent activity.
+
+  Output Format:
+    - Produce a concise, single-paragraph summary (300-500 characters) in natural language, highlighting the user's current short-term preferences in Movies.
+    - The output should be rich in semantic context, suitable for embedding generation using SBERT.
+
+example_output:
+  Recently, the user has shown a strong interest in fast-paced action and thriller movies, engaging with films that feature high-stakes plots, suspenseful narratives, and intense sequences. They seem particularly drawn to works featuring directors like Christopher Nolan and actors such as Keanu Reeves. Recent examples include "Inception" and "John Wick," indicating a preference for visually stunning, plot-driven experiences.
+
+
