@@ -1,4 +1,4 @@
-# Towards Explainable Temporal User Profiling with LLMs 
+# TETUP: Towards Explainable Temporal User Profiling with LLMs 
  
 
 ## 📌 Overview  
@@ -39,4 +39,5 @@ Performance Comparison our proposed method and baselines on Movies\&TV and Video
 
 ---
 Comparison of the proposed method against ablated variants on the Movies dataset, illustrating how each approach ranks items (Recall@10, Recall@20) and captures relevance (NDCG@10, NDCG@20) at various cutoff points.
+
 ![](images/chart.png)
