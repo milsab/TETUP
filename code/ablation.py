@@ -577,7 +577,7 @@ def main(seed):
     # -------------------
     # Initialize wandb
     # -------------------
-    wandb_key = "d082bbbf8cdf3b20630ab08e32c155ccc55f503c"
+    wandb_key = "YOUR_WANDB_KEY"
     wandb.login(key=wandb_key)
     wandb.init(
         project=cfg.WANDB_PROJECT,
